@@ -9,7 +9,7 @@ export default function Home() {
   const [foodCategory, setfoodCategory] = useState([]);
 
   const LoadData = async () => {
-    let response = await fetch("http://localhost:3000/api/foodData", {
+    let response = await fetch(`${import.meta.env.VITE_API_URL}/api/foodData`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

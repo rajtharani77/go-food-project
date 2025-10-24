@@ -18,7 +18,7 @@ export default function Cart() {
   const handleCheckOut = async () => {
     let userEmail = localStorage.getItem("UserEmail");
     console.log(data, localStorage.getItem("UserEmail"), new Date())
-    let response = await fetch("http://localhost:3000/api/orderData", {
+    let response = await fetch(`${import.meta.env.VITE_API_URL}/api/orderData`, {
       credentials: 'include',
       method: 'POST',
       headers: {
