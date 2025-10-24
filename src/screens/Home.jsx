@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Cards from '../components/Cards'
 import Footer from '../components/Footer'
 import Carousel from '../components/Carousal';
-import Navbar from '../components/navbar'
+import Navbar from '../components/Navbar'
 export default function Home() {
   const [foodItem, setfoodItem] = useState([]);
   const [search, setSearch] = useState('');
