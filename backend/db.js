@@ -1,6 +1,6 @@
-
+import 'dotenv/config';
 import mongoose from 'mongoose';
-const mongoURI = 'mongodb+srv://rajtharani77_db_user:RAJtharani77@cluster0.mledxs4.mongodb.net/GoFoodMERN?retryWrites=true&w=majority&appName=Cluster0';
+const mongoURI = process.env.MONGO_URI;
 
 const connectToDB = async () => {
   try {

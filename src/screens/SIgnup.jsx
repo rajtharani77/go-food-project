@@ -10,7 +10,7 @@ export default function SIgnup() {
     const handleSubmit= async (e)=>{
         e.preventDefault();
 
-        const response=await fetch("http://localhost:3000/api/createuser",{
+        const response=await fetch(`${import.meta.env.VITE_API_URL}/api/createuser`,{
             method:'POST',
             headers:{
                 'content-type':'application/json'

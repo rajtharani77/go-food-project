@@ -6,7 +6,8 @@ import Displayrouter from "./Routes/displayData.js";
 import Router from "./Routes/OrderData.js";
 
 const app = express();
-const port = process.env.PORT ||3000;
+
+const port = process.env.PORT||3000;
 mongodb();
 
 app.use((req, res, next) => {
