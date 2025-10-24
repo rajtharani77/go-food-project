@@ -6,11 +6,11 @@ import Displayrouter from "./Routes/displayData.js";
 import Router from "./Routes/OrderData.js";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT ||3000;
 mongodb();
 
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+    res.setHeader("Access-Control-Allow-Origin",process.env.CLIENT_URL || "http://localhost:5173");
 
     res.setHeader(
       "Access-control-allow-headers",
